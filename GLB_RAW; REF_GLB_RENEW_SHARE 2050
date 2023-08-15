@@ -1,0 +1,21 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<WindGas &le; 0.753<br/>gini = 0.42<br/>samples = 400<br/>value = [280, 120]<br/>class = Low Renew.>, fillcolor="#f0b78e"] ;
+1 [label=<gini = 0.273<br/>samples = 92<br/>value = [15, 77]<br/>class = High Renew.>, fillcolor="#60b0ea"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<WindBio &le; 0.476<br/>gini = 0.24<br/>samples = 308<br/>value = [265, 43]<br/>class = Low Renew.>, fillcolor="#e99559"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label=<gini = 0.375<br/>samples = 24<br/>value = [6, 18]<br/>class = High Renew.>, fillcolor="#7bbeee"] ;
+2 -> 3 ;
+4 [label=<PC &le; 1.117<br/>gini = 0.161<br/>samples = 284<br/>value = [259, 25]<br/>class = Low Renew.>, fillcolor="#e88d4c"] ;
+2 -> 4 ;
+5 [label=<gini = 0.042<br/>samples = 187<br/>value = [183, 4]<br/>class = Low Renew.>, fillcolor="#e6843d"] ;
+4 -> 5 ;
+6 [label=<WindGas &le; 0.883<br/>gini = 0.339<br/>samples = 97<br/>value = [76, 21]<br/>class = Low Renew.>, fillcolor="#eca470"] ;
+4 -> 6 ;
+7 [label=<gini = 0.43<br/>samples = 16<br/>value = [5, 11]<br/>class = High Renew.>, fillcolor="#93caf1"] ;
+6 -> 7 ;
+8 [label=<gini = 0.216<br/>samples = 81<br/>value = [71, 10]<br/>class = Low Renew.>, fillcolor="#e99355"] ;
+6 -> 8 ;
+}

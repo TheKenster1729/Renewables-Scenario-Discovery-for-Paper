@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<WindGas &le; 0.827<br/>gini = 0.506<br/>samples = 400<br/>value = [77, 264, 59]<br/>class = Cluster 1>, fillcolor="#8cf0b6"] ;
+1 [label=<WindGas &le; 0.647<br/>gini = 0.622<br/>samples = 124<br/>value = [54, 20, 50]<br/>class = Cluster 0>, fillcolor="#fef8f4"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<PC &le; 0.743<br/>gini = 0.355<br/>samples = 45<br/>value = [9, 1, 35]<br/>class = Cluster 2>, fillcolor="#a470ec"] ;
+1 -> 2 ;
+3 [label=<gini = 0.375<br/>samples = 8<br/>value = [6, 0, 2]<br/>class = Cluster 0>, fillcolor="#eeab7b"] ;
+2 -> 3 ;
+4 [label=<gini = 0.197<br/>samples = 37<br/>value = [3, 1, 33]<br/>class = Cluster 2>, fillcolor="#9050e8"] ;
+2 -> 4 ;
+5 [label=<Pop &le; 1.317<br/>gini = 0.582<br/>samples = 79<br/>value = [45, 19, 15]<br/>class = Cluster 0>, fillcolor="#f4c8a9"] ;
+1 -> 5 ;
+6 [label=<gini = 0.245<br/>samples = 7<br/>value = [0, 6, 1]<br/>class = Cluster 1>, fillcolor="#5ae996"] ;
+5 -> 6 ;
+7 [label=<gini = 0.539<br/>samples = 72<br/>value = [45, 13, 14]<br/>class = Cluster 0>, fillcolor="#f1bc95"] ;
+5 -> 7 ;
+8 [label=<WindBio &le; 0.476<br/>gini = 0.21<br/>samples = 276<br/>value = [23, 244, 9]<br/>class = Cluster 1>, fillcolor="#52e891"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<Pop &le; 1.54<br/>gini = 0.64<br/>samples = 22<br/>value = [10, 5, 7]<br/>class = Cluster 0>, fillcolor="#fae6d7"] ;
+8 -> 9 ;
+10 [label=<gini = 0.539<br/>samples = 16<br/>value = [10, 3, 3]<br/>class = Cluster 0>, fillcolor="#f1bb94"] ;
+9 -> 10 ;
+11 [label=<gini = 0.444<br/>samples = 6<br/>value = [0, 2, 4]<br/>class = Cluster 2>, fillcolor="#c09cf2"] ;
+9 -> 11 ;
+12 [label=<AEEI KOR / New 2016 &le; -0.396<br/>gini = 0.112<br/>samples = 254<br/>value = [13, 239, 2]<br/>class = Cluster 1>, fillcolor="#45e789"] ;
+8 -> 12 ;
+13 [label=<gini = 0.0<br/>samples = 2<br/>value = [2, 0, 0]<br/>class = Cluster 0>, fillcolor="#e58139"] ;
+12 -> 13 ;
+14 [label=<gini = 0.099<br/>samples = 252<br/>value = [11, 239, 2]<br/>class = Cluster 1>, fillcolor="#44e688"] ;
+12 -> 14 ;
+}

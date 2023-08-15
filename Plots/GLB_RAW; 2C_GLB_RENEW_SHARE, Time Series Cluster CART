@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<WindBio &le; 0.602<br/>gini = 0.6<br/>samples = 394<br/>value = [214, 96, 84]<br/>class = Cluster 0>, fillcolor="#f5cdb1"] ;
+1 [label=<AEEI EUR / New 2016 &le; 1.489<br/>gini = 0.226<br/>samples = 72<br/>value = [6, 63, 3]<br/>class = Cluster 1>, fillcolor="#54e992"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<gini = 0.149<br/>samples = 63<br/>value = [2, 58, 3]<br/>class = Cluster 1>, fillcolor="#49e78c"] ;
+1 -> 2 ;
+3 [label=<gini = 0.494<br/>samples = 9<br/>value = [4, 5, 0]<br/>class = Cluster 1>, fillcolor="#d7fae6"] ;
+1 -> 3 ;
+4 [label=<WindGas &le; 0.892<br/>gini = 0.509<br/>samples = 322<br/>value = [208, 33, 81]<br/>class = Cluster 0>, fillcolor="#f1bd97"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label=<gini = 0.573<br/>samples = 120<br/>value = [26, 24, 70]<br/>class = Cluster 2>, fillcolor="#c4a2f3"] ;
+4 -> 5 ;
+6 [label=<gini = 0.183<br/>samples = 202<br/>value = [182, 9, 11]<br/>class = Cluster 0>, fillcolor="#e88e4e"] ;
+4 -> 6 ;
+}
