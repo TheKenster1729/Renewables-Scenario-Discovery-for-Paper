@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.8.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1200 500" style="enable-background:new 0 0 1200 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill-opacity:0;}
+	.st2{fill:url(#SVGID_1_);}
+	.st3{fill:#231F20;}
+	.st4{font-family:'PalatinoLinotype-Roman';}
+	.st5{font-size:12px;}
+	.st6{font-size:15px;}
+	.st7{fill:none;}
+	.st8{fill:none;stroke:#000000;stroke-opacity:0.25;}
+	.st9{fill:#FFFF00;fill-opacity:0;}
+	.st10{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-dasharray:0,320;}
+	.st11{fill:none;stroke:#FF00FF;stroke-width:3;stroke-dasharray:0,320;}
+</style>
+<rect class="st0" width="1200" height="500"/>
+<g>
+	
+		<image style="overflow:visible;enable-background:new    ;" width="3000" height="1250" xlink:href="D829A948.png"  transform="matrix(0.4 0 0 0.4 0 0)">
+	</image>
+	
+		<image style="overflow:visible;enable-background:new    ;" width="3000" height="1250" xlink:href="D829A949.png"  transform="matrix(0.4 0 0 0.4 0 0)">
+	</image>
+</g>
+<g>
+	<g transform="translate(80,100)">
+		<rect x="766" y="107" class="st1" width="341.7" height="106"/>
+		<g transform="translate(0,139)">
+			
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-426.5333" y1="546.4844" x2="-426.5333" y2="547.4844" gradientTransform="matrix(30 0 0 -64 13587 35039)">
+				<stop  offset="0" style="stop-color:#648FFF"/>
+				<stop  offset="0.33" style="stop-color:#648FFF"/>
+				<stop  offset="0.33" style="stop-color:#DC267F"/>
+				<stop  offset="0.66" style="stop-color:#DC267F"/>
+				<stop  offset="0.66" style="stop-color:#FFB000"/>
+				<stop  offset="1" style="stop-color:#FFB000"/>
+			</linearGradient>
+			<rect x="776" class="st2" width="30" height="64"/>
+		</g>
+		<g transform="translate(0,139)">
+		</g>
+		<g transform="translate(0,-100)">
+			<g>
+				<text transform="matrix(1 0 0 1 808.9 296.64)" class="st3 st4 st5">Cluster #1</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 808.9 275.2)" class="st3 st4 st5">Cluster #2</text>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 808.9 254.08)" class="st3 st4 st5">Cluster #3</text>
+			</g>
+		</g>
+		<g transform="translate(-80,-100)">
+			<g transform="">
+				<text transform="matrix(1 0 0 1 856.02 230.5)" class="st3 st4 st6">Reference Global Outputs with Clusters, 2100</text>
+			</g>
+		</g>
+		<rect x="776" y="139" class="st7" width="30" height="64"/>
+	</g>
+</g>
+<g transform="">
+	<g transform="translate(80,100)">
+		<g transform="">
+			<g>
+				<g>
+					<g transform="translate(0,271.64512302718947)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">60k</text>
+					</g>
+					<g transform="translate(0,209.38934365350855)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">80k</text>
+					</g>
+					<g transform="translate(0,147.13356427982765)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -31.9902 3.2)" class="st3 st4 st5">100k</text>
+					</g>
+					<g transform="translate(0,84.87778490614673)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -31.9902 3.2)" class="st3 st4 st5">120k</text>
+					</g>
+					<g transform="translate(0,22.622005532465828)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -31.9902 3.2)" class="st3 st4 st5">140k</text>
+					</g>
+					<path class="st8" d="M-2,2h2v316h-2"/>
+				</g>
+				<g>
+					<text transform="matrix(1 0 0 1 -41.2866 -28)" class="st3 st4 st5">Total Elec (TWh)</text>
+				</g>
+				<g>
+					<g transform="translate(0,-10)">
+						<text transform="matrix(1 0 0 1 -20.6714 0)" class="st3 st4 st5">146.62k</text>
+					</g>
+					<g transform="translate(0,330)">
+						<text transform="matrix(1 0 0 1 -17.4927 7.5)" class="st3 st4 st5">45.11k</text>
+					</g>
+				</g>
+				<g>
+					<rect x="-5" y="2" class="st9" width="10" height="318"/>
+					<line class="st10" x1="0" y1="320" x2="0" y2="0"/>
+					<line class="st11" x1="0" y1="320" x2="0" y2="0"/>
+				</g>
+			</g>
+		</g>
+		<g transform="translate(107.28571428571429,0)">
+			<g>
+				<g>
+					<g transform="translate(0,294.5998359359321)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -32.4297 3.2)" class="st3 st4 st5">1400</text>
+					</g>
+					<g transform="translate(0,259.69262162355386)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -32.4297 3.2)" class="st3 st4 st5">1600</text>
+					</g>
+					<g transform="translate(0,224.78540731117562)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -32.4297 3.2)" class="st3 st4 st5">1800</text>
+					</g>
+					<g transform="translate(0,189.87819299879737)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -32.4297 3.2)" class="st3 st4 st5">2000</text>
+					</g>
+					<g transform="translate(0,154.97097868641913)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -32.4297 3.2)" class="st3 st4 st5">2200</text>
+					</g>
+					<g transform="translate(0,120.06376437404086)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -32.4297 3.2)" class="st3 st4 st5">2400</text>
+					</g>
+					<g transform="translate(0,85.15655006166261)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -32.4297 3.2)" class="st3 st4 st5">2600</text>
+					</g>
+					<g transform="translate(0,50.24933574928435)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -32.4297 3.2)" class="st3 st4 st5">2800</text>
+					</g>
+					<g transform="translate(0,15.342121436906112)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -32.4297 3.2)" class="st3 st4 st5">3000</text>
+					</g>
+					<path class="st8" d="M-2,2h2v316h-2"/>
+				</g>
+				<g>
+					<text transform="matrix(1 0 0 1 -54.3115 -28)" class="st3 st4 st5">Total PrimEnergy (EJ)</text>
+				</g>
+				<g>
+					<g transform="translate(0,-10)">
+						<text transform="matrix(1 0 0 1 -19.5313 0)" class="st3 st4 st5">3,076.4</text>
+					</g>
+					<g transform="translate(0,330)">
+						<text transform="matrix(1 0 0 1 -19.5313 7.5)" class="st3 st4 st5">1,265.9</text>
+					</g>
+				</g>
+				<g>
+					<rect x="-5" y="2" class="st9" width="10" height="318"/>
+					<line class="st10" x1="0" y1="320" x2="0" y2="0"/>
+					<line class="st11" x1="0" y1="320" x2="0" y2="0"/>
+				</g>
+			</g>
+		</g>
+		<g transform="translate(214.57142857142858,0)">
+			<g>
+				<g>
+					<g transform="translate(0,282.93657373609597)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -29.71 3.2)" class="st3 st4 st5">0.02</text>
+					</g>
+					<g transform="translate(0,226.0170325582873)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -36.0674 3.2)" class="st3 st4 st5">0.022</text>
+					</g>
+					<g transform="translate(0,169.09749138047846)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -36.0674 3.2)" class="st3 st4 st5">0.024</text>
+					</g>
+					<g transform="translate(0,112.17795020266978)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -36.0674 3.2)" class="st3 st4 st5">0.026</text>
+					</g>
+					<g transform="translate(0,55.25840902486095)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -36.0674 3.2)" class="st3 st4 st5">0.028</text>
+					</g>
+					<path class="st8" d="M-2,2h2v316h-2"/>
+				</g>
+				<g>
+					<text transform="matrix(1 0 0 1 -42.4536 -28)" class="st3 st4 st5">GDP Growth (%)</text>
+				</g>
+				<g>
+					<g transform="translate(0,-10)">
+						<text transform="matrix(1 0 0 1 -24.0698 0)" class="st3 st4 st5">0.029871</text>
+					</g>
+					<g transform="translate(0,330)">
+						<text transform="matrix(1 0 0 1 -24.0698 7.5)" class="st3 st4 st5">0.018768</text>
+					</g>
+				</g>
+				<g>
+					<rect x="-5" y="2" class="st9" width="10" height="318"/>
+					<line class="st10" x1="0" y1="320" x2="0" y2="0"/>
+					<line class="st11" x1="0" y1="320" x2="0" y2="0"/>
+				</g>
+			</g>
+		</g>
+		<g transform="translate(321.85714285714283,0)">
+			<g>
+				<g>
+					<g transform="translate(0,274.2589764354127)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">10k</text>
+					</g>
+					<g transform="translate(0,221.13600476675506)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">20k</text>
+					</g>
+					<g transform="translate(0,168.0130330980974)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">30k</text>
+					</g>
+					<g transform="translate(0,114.89006142943977)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">40k</text>
+					</g>
+					<g transform="translate(0,61.767089760782106)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">50k</text>
+					</g>
+					<g transform="translate(0,8.644118092124494)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">60k</text>
+					</g>
+					<path class="st8" d="M-2,2h2v316h-2"/>
+				</g>
+				<g>
+					<text transform="matrix(1 0 0 1 -36.4843 -28)" class="st3 st4 st5">Nuclear (TWh)</text>
+				</g>
+				<g>
+					<g transform="translate(0,-10)">
+						<text transform="matrix(1 0 0 1 -20.6714 0)" class="st3 st4 st5">61.251k</text>
+					</g>
+					<g transform="translate(0,330)">
+						<text transform="matrix(1 0 0 1 -17.4926 7.5)" class="st3 st4 st5">1.766k</text>
+					</g>
+				</g>
+				<g>
+					<rect x="-5" y="2" class="st9" width="10" height="318"/>
+					<line class="st10" x1="0" y1="320" x2="0" y2="0"/>
+					<line class="st11" x1="0" y1="320" x2="0" y2="0"/>
+				</g>
+			</g>
+		</g>
+		<g transform="translate(429.14285714285717,0)">
+			<g>
+				<g>
+					<g transform="translate(0,291.63052784466333)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -19.2754 3.2)" class="st3 st4 st5">5k</text>
+					</g>
+					<g transform="translate(0,254.48865681484733)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">10k</text>
+					</g>
+					<g transform="translate(0,217.34678578503136)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">15k</text>
+					</g>
+					<g transform="translate(0,180.2049147552154)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">20k</text>
+					</g>
+					<g transform="translate(0,143.0630437253994)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">25k</text>
+					</g>
+					<g transform="translate(0,105.92117269558341)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">30k</text>
+					</g>
+					<g transform="translate(0,68.77930166576743)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">35k</text>
+					</g>
+					<g transform="translate(0,31.63743063595144)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">40k</text>
+					</g>
+					<path class="st8" d="M-2,2h2v316h-2"/>
+				</g>
+				<g>
+					<text transform="matrix(1 0 0 1 -26.9727 -28)" class="st3 st4 st5">Gas (TWh)</text>
+				</g>
+				<g>
+					<g transform="translate(0,-10)">
+						<text transform="matrix(1 0 0 1 -17.4927 0)" class="st3 st4 st5">43.99k</text>
+					</g>
+					<g transform="translate(0,330)">
+						<text transform="matrix(1 0 0 1 -14.314 7.5)" class="st3 st4 st5">1.45k</text>
+					</g>
+				</g>
+				<g>
+					<rect x="-5" y="2" class="st9" width="10" height="318"/>
+					<line class="st10" x1="0" y1="320" x2="0" y2="0"/>
+					<line class="st11" x1="0" y1="320" x2="0" y2="0"/>
+				</g>
+			</g>
+		</g>
+		<g transform="translate(536.4285714285714,0)">
+			<g>
+				<g>
+					<g transform="translate(0,248.2020596704029)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">10k</text>
+					</g>
+					<g transform="translate(0,177.84754939680886)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">20k</text>
+					</g>
+					<g transform="translate(0,107.4930391232148)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">30k</text>
+					</g>
+					<g transform="translate(0,37.138528849620705)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">40k</text>
+					</g>
+					<path class="st8" d="M-2,2h2v316h-2"/>
+				</g>
+				<g>
+					<text transform="matrix(1 0 0 1 -28.3887 -28)" class="st3 st4 st5">Coal (TWh)</text>
+				</g>
+				<g>
+					<g transform="translate(0,-10)">
+						<text transform="matrix(1 0 0 1 -20.6714 0)" class="st3 st4 st5">44.994k</text>
+					</g>
+					<g transform="translate(0,330)">
+						<text transform="matrix(1 0 0 1 -17.4927 7.5)" class="st3 st4 st5">0.079k</text>
+					</g>
+				</g>
+				<g>
+					<rect x="-5" y="2" class="st9" width="10" height="318"/>
+					<line class="st10" x1="0" y1="320" x2="0" y2="0"/>
+					<line class="st11" x1="0" y1="320" x2="0" y2="0"/>
+				</g>
+			</g>
+		</g>
+		<g transform="translate(643.7142857142857,0)">
+			<g>
+				<g>
+					<g transform="translate(0,313.04409948970437)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">10k</text>
+					</g>
+					<g transform="translate(0,269.5108230190227)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">20k</text>
+					</g>
+					<g transform="translate(0,225.97754654834102)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">30k</text>
+					</g>
+					<g transform="translate(0,182.44427007765935)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">40k</text>
+					</g>
+					<g transform="translate(0,138.91099360697768)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">50k</text>
+					</g>
+					<g transform="translate(0,95.37771713629603)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">60k</text>
+					</g>
+					<g transform="translate(0,51.844440665614336)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">70k</text>
+					</g>
+					<g transform="translate(0,8.311164194932694)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -25.6328 3.2)" class="st3 st4 st5">80k</text>
+					</g>
+					<path class="st8" d="M-2,2h2v316h-2"/>
+				</g>
+				<g>
+					<text transform="matrix(1 0 0 1 -34.0551 -28)" class="st3 st4 st5">Renew (TWh)</text>
+				</g>
+				<g>
+					<g transform="translate(0,-10)">
+						<text transform="matrix(1 0 0 1 -17.4926 0)" class="st3 st4 st5">81.45k</text>
+					</g>
+					<g transform="translate(0,330)">
+						<text transform="matrix(1 0 0 1 -17.4926 7.5)" class="st3 st4 st5">8.862k</text>
+					</g>
+				</g>
+				<g>
+					<rect x="-5" y="2" class="st9" width="10" height="318"/>
+					<line class="st10" x1="0" y1="320" x2="0" y2="0"/>
+					<line class="st11" x1="0" y1="320" x2="0" y2="0"/>
+				</g>
+			</g>
+		</g>
+		<g transform="translate(751,0)">
+			<g>
+				<g>
+					<g transform="translate(0,298.6094553221961)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -23.3525 3.2)" class="st3 st4 st5">0.2</text>
+					</g>
+					<g transform="translate(0,238.69882777003045)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -23.3525 3.2)" class="st3 st4 st5">0.3</text>
+					</g>
+					<g transform="translate(0,178.78820021786476)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -23.3525 3.2)" class="st3 st4 st5">0.4</text>
+					</g>
+					<g transform="translate(0,118.87757266569913)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -23.3525 3.2)" class="st3 st4 st5">0.5</text>
+					</g>
+					<g transform="translate(0,58.9669451135335)">
+						<line class="st8" x1="0" y1="0" x2="-4" y2="0"/>
+						<text transform="matrix(1 0 0 1 -23.3525 3.2)" class="st3 st4 st5">0.6</text>
+					</g>
+					<path class="st8" d="M-2,2h2v316h-2"/>
+				</g>
+				<g>
+					<text transform="matrix(1 0 0 1 -29.1699 -28)" class="st3 st4 st5">2100 Share</text>
+				</g>
+				<g>
+					<g transform="translate(0,-10)">
+						<text transform="matrix(1 0 0 1 -20.8911 0)" class="st3 st4 st5">0.69509</text>
+					</g>
+					<g transform="translate(0,330)">
+						<text transform="matrix(1 0 0 1 -20.8911 7.5)" class="st3 st4 st5">0.16763</text>
+					</g>
+				</g>
+				<g>
+					<rect x="-5" y="2" class="st9" width="10" height="318"/>
+					<line class="st10" x1="0" y1="320" x2="0" y2="0"/>
+					<line class="st11" x1="0" y1="320" x2="0" y2="0"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -3,8 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-# plotly.io.orca.config.executable = r'C:\Users\kenny\anaconda3\pkgs\plotly-orca-1.3.1-1\orca_app\orca.exe'
-
 class SD:
     def __init__(self, input_case, output_case):
         """Creates an object that stores the input and output dataframes that contain simulation results. These objects have a number of
@@ -15,8 +13,7 @@ class SD:
             input_case (str): the input data to be used (supported: GLB_GRP_NORM (global, grouped, and normed); GLB_RAW
             (global, full number of variables, no normalization); USA (full number of variables with GDP + Pop specific to US);
             CHN (full number of variables with GDP + Pop specific to China); EUR (full number of variables with GDP + Pop
-            specific to EU); CHN_ENDOG_RENEW (output-output mapping as shown in paper section 4.1); CHN_ENDOG_EMISSIONS (output-output
-            mapping as shown in paper section 4.2))
+            specific to EU); CHN_ENDOG_RENEW; CHN_ENDOG_EMISSIONS)
 
             output_case (str): the output metric (supported: REF_GLB_RENEW_SHARE (global share of renewables under
             the reference scenario); REF_USA_RENEW_SHARE (US share of renewables under the reference scenario); REF_CHN_RENEW_SHARE
@@ -25,9 +22,9 @@ class SD:
             renewables under the policy scenario); 2C_CHN_RENEW_SHARE (China share of renewables under the policy scenario);
             2C_EUR_RENEW_SHARE (EU share of renewables under the policy scenario); REF_GLB_RENEW (global renewable energy
             production in Twh); REF_GLB_TOT (total global energy production in Twh); 2C_GLB_RENEW (global renewable energy production
-            in Twh under policy); 2C_GLB_TOT (total global energy production in Twh under policy); 2C_CHN_ENDOG_RENEW (output-output
-            mapping as shown in paper section 4.1); REF_CHN_EMISSIONS (output-output mapping as shown in paper section 4.1); CHN_ENDOG_EMISSIONS
-            (output-output mapping as shown in paper section 4.2))
+            in Twh under policy); 2C_GLB_TOT (total global energy production in Twh under policy); 2C_CHN_ENDOG_RENEW; REF_CHN_EMISSIONS; 
+            CHN_ENDOG_EMISSIONS)
+            
 
         Raises:
             ValueError: if an invalid input case is passed
@@ -35,14 +32,15 @@ class SD:
         """
         self.input_case = input_case
         self.output_case = output_case
-        self.hyperparams = None
         self.colors = ['#648FFF', '#785EF0', '#DC267F', '#FE6100', '#FFB000'] # colorblind-friendly palette from IBM
                     # blue         purple      magenta   orange      tan
+        
         # "translates" between the abbreviations used in the code and the long forms used in the paper
         self.readability_dict = {'GLB_RAW': 'Global', 'REF': 'Share of Renewables Under Reference', 'POL': 'Share of Renewables Under Policy',
                                 'CHN': 'China', 'USA': 'USA', 'EUR': 'Europe'}
         self.ref_or_pol = 'REF' if 'REF' in self.output_case else 'POL'
 
+        # setting up the dataframes for the inputs if a valid input is passed, raise value error otherwise
         self.supported_input_scenarios = ['GLB_GRP_NORM', 'GLB_RAW', 'USA', 'CHN', 'EUR', 'CHN_ENDOG_RENEW', 'CHN_ENDOG_EMISSIONS']
         self.natural_to_code_conversions_dict_inputs = {'GLB_GRP_NORM': ['samples-norm+groupedav', 'A:J'], 'GLB_RAW': ['samples', 'A:BB'], 'USA': ['samples', 'A:AZ, BC:BF'],
             'CHN': ['samples', 'A:AZ, BG:BJ'], 'EUR': ['samples', 'A:AZ, BK: BN'], 'CHN_ENDOG_RENEW': ['2C_CHN_renew_outputs_inputs', 'A:G'],
@@ -66,6 +64,7 @@ class SD:
         else:
             raise ValueError('This input scenario is not supported. Supported scenarios are {}'.format(self.supported_input_scenarios))
 
+        # setting up output dataframes, raising value error if passed output is invalid
         self.supported_output_scenarios = ['REF_GLB_RENEW_SHARE', 'REF_USA_RENEW_SHARE', 'REF_CHN_RENEW_SHARE', 'REF_EUR_RENEW_SHARE',
             '2C_GLB_RENEW_SHARE', '2C_USA_RENEW_SHARE', '2C_CHN_RENEW_SHARE', '2C_EUR_RENEW_SHARE', 'REF_GLB_RENEW', 'REF_GLB_TOT', '2C_GLB_RENEW', '2C_GLB_TOT',
             '2C_CHN_ENDOG_RENEW', 'REF_CHN_EMISSIONS']
@@ -89,7 +88,7 @@ class SD:
             raise ValueError('This output scenario is not supported. Supported scenarios are {}'.format(self.supported_output_scenarios))
 
     def get_X(self, runs = False):
-        """Get the exogenous dataset (does not include run numbers).
+        """Get the exogenous dataset (does not include run numbers by default).
 
         Returns:
             DataFrame: Input variables and their values
@@ -100,7 +99,7 @@ class SD:
             return self.input_df[self.input_df.columns[1:]]
 
     def get_y(self, runs = False):
-        """Get the endogenous dataset (does not include run numbers).
+        """Get the endogenous dataset (does not include run numbers by default).
 
         Returns:
             DataFrame: Output timeseries
@@ -123,6 +122,22 @@ class SD:
         return self.output_df[str(year)]
 
     def categorize(self, year, percentile = 70, gt = True):
+        """Helper method that splits data from a given year into cases of interest (1) and all other cases (0).
+        The passed percentile, default 70, is the threshold for the percentile value that determines whether a case
+        is a case of interest or not. gt stands for "greater than" and determines whether cases of interest are 
+        above the threshold percentile (default) or below.
+
+        Args:
+            year (int): A year included in the dataset (options:
+            2007, and 2010-2100 in 5-year increments)
+            percentile (float, optional): the threshold percentile defining a case of interest
+            gt (bool, optional): whether cases of interest are defined as above or below the threshold
+
+        Returns:
+            categorical_data (np.array): a 1D array of length equivalent to the length of the data for the given year, containing
+            1s corresponding to cases of interest and 0s otherwise
+
+        """
         continuous_data = self.get_y_by_year(year)
         percentile_val = np.percentile(continuous_data, percentile)
         if gt == True:
@@ -137,7 +152,8 @@ class SD:
     def parallel_plot_grp_norm(self, year, percentile = 70):
         """Generate a parallel plot for the given output scenario, using the global grouped and normed inputs. Note that the parallel
         plot will only use the global grouped and normed inputs, so this function should only be used with global output data. Populates
-        current working directory with SVG image of the plot for editing.
+        current working directory with SVG image of the plot for editing. This function was not used to generate any figures for the 
+        companion publication.
 
         Args:
             year (int): A year included in the dataset (options:
@@ -613,9 +629,11 @@ class SD:
             if show:
                 plt.show()
 
-    def permutation_importance(self, year):
+    def permutation_importance(self, year, show = True, save = False):
         from sklearn.inspection import permutation_importance
         from sklearn.linear_model import LogisticRegression
+        from sklearn.ensemble import RandomForestClassifier
+        import seaborn as sns
 
         X = self.get_X()
         y_discrete = self.categorize(year)
@@ -639,7 +657,31 @@ class SD:
                 f" +/- {perm_importance.importances_std[i]:.3f}")
                 num_important += 1
 
-        print(num_important)
+        print("Total number of important features:", num_important)
+
+        importances_dict = {feature_name: importance for feature_name, importance in zip(X.columns, perm_importance.importances_mean)}
+        importances_sorted = sorted(importances_dict.items(), key = lambda x: x[1], reverse = True)
+        only_important_features = importances_sorted[:9]
+
+        barx = [i[0] for i in only_important_features]
+        bary = [i[1] for i in only_important_features]
+
+        rcParams = {"font.sans-serif": "Palatino Linotype", "font.size": 15, "axes.titlesize": 28, "axes.labelsize": 21,
+                    "xtick.labelsize": 15, "ytick.labelsize": 15, "legend.fontsize": 15, "figure.titlesize": 28, "patch.edgecolor": "gray",
+                    "axes.edgecolor": "lightgray"}
+        sns.set_theme(style = "white", rc = rcParams)
+
+        fig, ax = plt.subplots(figsize = (16, 9))
+        palette = [self.colors[0] for i in range(num_important)] if "REF" in self.output_case else [self.colors[1] for i in range(num_important)]
+        sns.barplot(x = barx, y = bary, palette = palette, ax = ax)
+        ax.set_xlabel("Feature")
+        ax.set_ylabel("Permutation Importance")
+        ax.set_title("Permutation Importances: Global Share of Renewables Under Reference 2050")
+
+        if save:
+            fig.savefig("Figures Second Draft/perm_importances_{}_{}_{}".format(self.input_case, self.output_case, year), dpi = 400)
+        if show:
+            fig.show()
 
 # a few plots that aren't included in the methods above
 if __name__ == '__main__':
@@ -647,8 +689,12 @@ if __name__ == '__main__':
         cwd = r'C:\Users\kenny\My Drive\School\College\Senior Year\Senior Spring\UROP\Renewables Scenario Discovery for Paper'
         os.chdir(cwd)
     except FileNotFoundError:
-        cwd = r'G:\My Drive\School\College\Senior Year\Senior Spring\UROP\Renewables Scenario Discovery for Paper'
-        os.chdir(cwd)
+        try:
+            cwd = r'G:\My Drive\School\College\Senior Year\Senior Spring\UROP\Renewables Scenario Discovery for Paper'
+            os.chdir(cwd)
+        except FileNotFoundError:
+            cwd = r'C:\Users\kcox\Documents\GitHub\Renewables-Scenario-Discovery-for-Paper'
+            os.chdir(cwd)
 
     def scenario_classification_scatterplot(total, renew, share, save = False):
         # rewrite this so args are objects, that will allow the figure to be renamed properly each time
@@ -777,13 +823,15 @@ if __name__ == '__main__':
             make_heatmap(SD_obj_ref)
             make_heatmap(SD_obj_pol)
 
-    def global_outputs_clustering(year = 2050):
+    def global_outputs_clustering(year = 2050, show = True, save = False):
         import plotly.graph_objects as go
 
-        input_sd_obj = SD("GLB_RAW", "2C_GLB_RENEW_SHARE")
-        df_to_plot = pd.read_excel("Full Data for Paper.xlsx", sheet_name = "2C_GLB_renew_inputs_{}".format(str(year)), header = 2)
-        crashed_runs = [3, 14, 74, 116, 130, 337] # these will have to be updated for any crashed runs in other ensembles
-        df_to_plot = df_to_plot[~df_to_plot["Run #"].isin(crashed_runs)]
+        input_sd_obj = SD("GLB_RAW", "REF_GLB_RENEW_SHARE")
+        # df_to_plot = pd.read_excel("Full Data for Paper.xlsx", sheet_name = "2C_GLB_renew_inputs_{}".format(str(year)), header = 2) # this is for policy only
+        df_to_plot = pd.read_excel("Full Data for Paper.xlsx", sheet_name = "REF_GLB_renew_inputs", header = 2)
+        # crashed_runs = [3, 14, 74, 116, 130, 337] # these will have to be updated for any crashed runs in other ensembles # crashed runs only apply for policy
+        # df_to_plot = df_to_plot[~df_to_plot["Run #"].isin(crashed_runs)]
+        print(df_to_plot)
 
         time_series_df = input_sd_obj.time_series_clustering()
         just_cluster_labels = time_series_df.pivot(index = "Run #", columns = "Year", values = "Cluster #")[2007].values
@@ -800,7 +848,7 @@ if __name__ == '__main__':
             data = go.Parcoords(
                 line = dict(color = df_to_plot["Cluster #"].apply(lambda x: int(x[-1])), # this is a somewhat sloppy workaround to how plotly does parallel axis plots, and it will break for n_clusters > 9
                             colorscale = color_scale,
-                            colorbar = dict(showticklabels = True, tickvals = [1.33, 2, 2.66], ticktext = ["Cluster #1", "Cluster #2", "Cluster #3"], title = "Policy Global Outputs with Clusters, {}".format(year), len = 0.33),
+                            colorbar = dict(showticklabels = True, tickvals = [1.33, 2, 2.66], ticktext = ["Cluster #1", "Cluster #2", "Cluster #3"], title = "Reference Global Outputs with Clusters, {}".format(year), len = 0.33),
                             showscale = True),
                 dimensions = list(
                     dimensions
@@ -814,9 +862,10 @@ if __name__ == '__main__':
         #     tickvals = [0.33, 0.66 + 0.66/2, 0.66*2 + 0.66/2],
         #     ticktext = ['Cluster 1', 'Cluster 2', 'Cluster 3'],
         #     lenmode = 'pixels', len = 100, yanchor = 'middle'), width = 1200)
-
-        # fig.show()
-        fig.write_image('Plots/Policy Global Outputs with Clusters {}.svg'.format(year), width = 1200)
+        if show:
+            fig.show()
+        if save:
+            fig.write_image('Plots/Reference Global Outputs with Clusters {}.svg'.format(year), width = 1200)
 
     def heatmap_for_all_regions(save = False, show = True, policy = "ref"):
         from seaborn import heatmap
@@ -977,13 +1026,13 @@ if __name__ == '__main__':
     # china.parallel_plot_most_important_inputs(2050)
     # nuke = SD('GLB_RAW', '2C_GLB_RENEW_SHARE')
     # nuke.parallel_plot_most_important_inputs(2090)
-    sd = SD('GLB_RAW', '2C_GLB_RENEW_SHARE')
+    # sd = SD('GLB_RAW', 'REF_GLB_RENEW_SHARE')
     # sd.get_cluster_barycenters()
-    global_outputs_clustering(year = 2100)
+    # global_outputs_clustering(year = 2100)
     # sd.plot_timeseries_clusters(xlabel = "Year", ylabel = "Fraction of Energy from Renewables", title = 
     #                             "Time Series Clustering, Global Share of Renewables Under Policy", show = False, save = True)
-
-    # sd.permutation_importance(2050)
+    global_outputs_clustering(year = 2100, save = True, show = False)
+    # sd.permutation_importance(2050, save = True, show = False)
     # heatmap_for_all_regions()
     # sd.time_series_clustering(show = False, export = True)
     # sd.predict_individual_clusters()
